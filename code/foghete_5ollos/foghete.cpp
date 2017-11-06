@@ -72,11 +72,12 @@ void foghete::Go(int lspeed, int rspeed)
       RMotor.Go(rspeed);
       break;
     default:
-      //La accion por defecto deberia ser no hacer nada, y proseguir con la accion anterior.
-      //Como hemos contemplado explicitamente la posibilidad de no detectar linea, podriamos considerar cualquier otra opcion como imposible.
+      //En principio la intencion era poder detectar cuando habiamos perdido la linea.
       //Sin embargo, para poder hacer eso deberiamos estar seguros que por construccion, siempre habra algun sensor detectando linea
       //y que nunca se nos colara la linea entre dos sensores sin que la detecte ninguno de ellos.
-      //Eso en nuestro chasis no es facil, por no contar con los agujeros necesarios, asi que no podemos programar una accion concreta para esa situacion.
+      //Eso en nuestro chasis no es facil, por no contar con los agujeros necesarios.
+      //Como no podemos asegurar que nunca se nos colara la linea entre dos sensores sin ser detectada,
+      //no podemos programar una accion concreta para cuando supuestamente la hayamos perdido.
       //Asi que con 5 sensores conseguimos una mayor resolucion en las correcciones de la trayectoria, pero seguimos sin poder detectar cuando estamos perdidos.
       //La accion por defecto sigue siendo no hacer nada.
     break;

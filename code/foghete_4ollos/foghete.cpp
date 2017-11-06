@@ -58,10 +58,8 @@ void foghete::Go(int lspeed, int rspeed)
       RMotor.Go(rspeed);
       break;
     default:
-      //La accion por defecto es seguir adelante.
-      //Aqui quedaria incluida la opcion de detectar linea entre los dos sensores centrales, en cuyo caso seguimos adelante.
-      LMotor.Go(lspeed);
-      RMotor.Go(rspeed);
+      //La accion por defecto es no hacer nada, con lo que sigue vigente la ultima orden que hayamos dado a los motores.
+      //Aqui quedaria incluida la opcion de detectar linea entre los dos sensores centrales.
     break;
   }
   

@@ -19,9 +19,8 @@ void foghete::Go(int lspeed, int rspeed)
     {
     //... quiere decir que tenemos la linea en el centro de los sensores,
     //o bien estamos completamente perdidos...
-    //En cualquier caso, seguimos adelante.
-    LMotor.Go(lspeed);
-    RMotor.Go(rspeed);
+    //Lo mejor es no hacer nada, con lo que seguira activa la orden anterior que le hayamos dado a los motores.
+    //Deberiamos quitar todo el if, pero lo dejamos por motivos didacticos.
     }
   else if ( ( lsensor == 0 ) && ( rsensor == 1 ) )   //Si detectamos linea en el sensor derecho...
     {

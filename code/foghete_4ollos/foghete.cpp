@@ -39,6 +39,12 @@ void foghete::Go(int lspeed, int rspeed)
       LMotor.Go(lspeed);
       RMotor.Go(rspeed/2);
       break;
+    case 6: //0110
+      //Si detectamos linea en los dos sensores centrales...
+      //... debemos seguir adelante.
+      LMotor.Go(lspeed);
+      RMotor.Go(rspeed);
+      break;
     case 4: //0100
       //Si detectamos linea en el sensor centro izquierdo...
       //... debemos girar POCO a la izquierda (avanzamos a media velocidad con la rueda izquierda).
@@ -59,7 +65,6 @@ void foghete::Go(int lspeed, int rspeed)
       break;
     default:
       //La accion por defecto es no hacer nada, con lo que sigue vigente la ultima orden que hayamos dado a los motores.
-      //Aqui quedaria incluida la opcion de detectar linea entre los dos sensores centrales.
     break;
   }
   

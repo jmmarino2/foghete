@@ -47,6 +47,12 @@ void foghete::Go(int lspeed, int rspeed)
       LMotor.Go(lspeed);
       RMotor.Go(rspeed * 0.66);
       break;
+    case 4: //00100
+      //Si detectamos linea en el sensor central...
+      //... debemos seguir adelante.
+      LMotor.Go(lspeed);
+      RMotor.Go(rspeed);
+      break;
     case 12: //01100
       //Si detectamos linea en el sensor central y centro izquierdo...
       //... debemos girar POCO a la izquierda (avanzamos a media velocidad con la rueda izquierda).

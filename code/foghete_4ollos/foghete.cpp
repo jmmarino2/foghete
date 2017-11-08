@@ -51,7 +51,7 @@ void foghete::Go(int lspeed, int rspeed)
       LMotor.Go(lspeed/2);
       RMotor.Go(rspeed);
       break;
-    case 6: //1100
+    case 12: //1100
       //Si detectamos linea entre los dos sensores izquierdos...
       //... debemos girar a la izquierda (pivotamos sobre la rueda izquierda).
       LMotor.Stop();

@@ -20,7 +20,7 @@
    BPWM: 10
  
    //ASIGNACION PINES PARA SELECCION VELOCIDAD
-   SPD: A0 
+   SPD: A7 
  
  */
 
